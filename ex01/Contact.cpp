@@ -6,13 +6,14 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:26:51 by akostian          #+#    #+#             */
-/*   Updated: 2025/02/10 17:26:15 by akostian         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:54:31 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AwesomePhoneBook.hpp"
 
-Contact::Contact(){
+Contact::Contact()
+{
 	std::cout << "Contact\t\tdefault constructor called\n";
 };
 
@@ -37,52 +38,75 @@ Contact::~Contact()
 	std::cout << "Contact\t\tdeconstructor called\n";
 }
 
-void	Contact::setFirst_name(std::string first_name)
+Contact::Contact(const Contact& other) :
+	first_name(other.first_name),
+	last_name(other.last_name),
+	nickname(other.nickname),
+	phone_number(other.phone_number),
+	secret(other.secret)
 {
-	this->first_name = first_name;
+	std::cout << "Contact\t\tcopy constructor called\n";
 }
 
-void	Contact::setLast_name(std::string last_name)
+Contact& Contact::operator=(const Contact& other)
 {
-	this->last_name = last_name;
+	std::cout << "Contact\t\tcopy assignment operator called\n";
+	if (this != &other) {
+		this->first_name = other.first_name;
+		this->last_name = other.last_name;
+		this->nickname = other.nickname;
+		this->phone_number = other.phone_number;
+		this->secret = other.secret;
+	}
+	return *this;
 }
 
-void	Contact::setNickname(std::string nickname)
+std::string	Contact::getFirst_name()
 {
-	this->nickname = nickname;
+	return this->first_name;
 }
 
-void	Contact::setPhone_number(std::string phone_number)
+void	Contact::setFirst_name(std::string value)
 {
-	this->phone_number = phone_number;
+	this->first_name = value;
 }
 
-void	Contact::setSecret(std::string secret)
+std::string	Contact::getLast_name()
 {
-	this->secret = secret;
+	return this->last_name;
 }
 
-std::string	Contact::getFirst_name(void)
+void	Contact::setLast_name(std::string value)
 {
-	return (this->first_name);
+	this->last_name = value;
 }
 
-std::string	Contact::getLast_name(void)
+std::string	Contact::getNickname()
 {
-	return (this->last_name);
+	return this->nickname;
 }
 
-std::string	Contact::getNickname(void)
+void	Contact::setNickname(std::string value)
 {
-	return (this->nickname);
+	this->nickname = value;
 }
 
-std::string	Contact::getPhone_number(void)
+std::string	Contact::getPhone_number()
 {
-	return (this->phone_number);
+	return this->phone_number;
 }
 
-std::string	Contact::getSecret(void)
+void	Contact::setPhone_number(std::string value)
 {
-	return (this->secret);
+	this->phone_number = value;
+}
+
+std::string	Contact::getSecret()
+{
+	return this->secret;
+}
+
+void	Contact::setSecret(std::string value)
+{
+	this->secret = value;
 }

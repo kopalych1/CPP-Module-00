@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:26:58 by akostian          #+#    #+#             */
-/*   Updated: 2025/02/10 17:16:19 by akostian         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:52:39 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ class Contact
 			std::string	secret
 		);
 		~Contact(void);
+		Contact(const Contact &other);
+		Contact & operator = (const Contact &other);
 
 		std::string	getFirst_name(void);
 		std::string	getLast_name(void);

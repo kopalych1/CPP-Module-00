@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:54:45 by akostian          #+#    #+#             */
-/*   Updated: 2025/02/10 17:24:14 by akostian         ###   ########.fr       */
+/*   Updated: 2025/02/13 22:56:42 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@
 class PhoneBook
 {
 	private:
+		Contact	contacts[8];
+		int		contacts_num;
 
 	public:
-		PhoneBook(void);
-		~PhoneBook(void);
-		Contact	contacts[8];
+		PhoneBook();
+		PhoneBook(const PhoneBook& other);
+		PhoneBook& operator=(const PhoneBook& other);
+		~PhoneBook();
 };
 
 #endif
