@@ -6,7 +6,7 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 14:47:56 by akostian          #+#    #+#              #
-#    Updated: 2025/02/10 17:14:30 by akostian         ###   ########.fr        #
+#    Updated: 2025/02/14 11:51:00 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ run: all
 
 
 vrun: all
-	valgrind ./$(NAME)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
 #
 
 
