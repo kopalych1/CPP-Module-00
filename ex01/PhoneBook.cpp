@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 17:00:17 by akostian          #+#    #+#             */
-/*   Updated: 2025/02/14 16:38:09 by akostian         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:41:38 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ PhoneBook::PhoneBook() :
 	contacts_num(0),
 	contacts_index(0)
 {
-	std::cout << "PhoneBook\tconstructor called\n";
+	// std::cout << "PhoneBook\tconstructor called\n";
 }
 
 PhoneBook::PhoneBook(const PhoneBook& other)
 {
 	(void)other;
-	std::cout << "PhoneBook\tcopy constructor called\n";
+	// std::cout << "PhoneBook\tcopy constructor called\n";
 }
 
 PhoneBook& PhoneBook::operator=(const PhoneBook& other)
 {
-	std::cout << "PhoneBook\tcopy assignment operator called\n";
+	// std::cout << "PhoneBook\tcopy assignment operator called\n";
 	(void)other;
 	if (this != &other) {
 		this->contacts_num = 0;
@@ -38,7 +38,7 @@ PhoneBook& PhoneBook::operator=(const PhoneBook& other)
 
 PhoneBook::~PhoneBook()
 {
-	std::cout << "PhoneBook\tdeconstructor called\n";
+	// std::cout << "PhoneBook\tdeconstructor called\n";
 }
 
 void	PhoneBook::add_contact(Contact& contact)

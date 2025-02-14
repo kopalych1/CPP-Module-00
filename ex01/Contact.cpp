@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:26:51 by akostian          #+#    #+#             */
-/*   Updated: 2025/02/13 22:54:31 by akostian         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:41:17 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Contact::Contact()
 {
-	std::cout << "Contact\t\tdefault constructor called\n";
+	// std::cout << "Contact\t\tdefault constructor called\n";
 };
 
 Contact::Contact(
@@ -30,12 +30,12 @@ Contact::Contact(
 	phone_number(phone_number),
 	secret(secret)
 {
-	std::cout << "Contact\t\tconstructor called\n";
+	// std::cout << "Contact\t\tconstructor called\n";
 }
 
 Contact::~Contact()
 {
-	std::cout << "Contact\t\tdeconstructor called\n";
+	// std::cout << "Contact\t\tdeconstructor called\n";
 }
 
 Contact::Contact(const Contact& other) :
@@ -45,12 +45,12 @@ Contact::Contact(const Contact& other) :
 	phone_number(other.phone_number),
 	secret(other.secret)
 {
-	std::cout << "Contact\t\tcopy constructor called\n";
+	// std::cout << "Contact\t\tcopy constructor called\n";
 }
 
 Contact& Contact::operator=(const Contact& other)
 {
-	std::cout << "Contact\t\tcopy assignment operator called\n";
+	// std::cout << "Contact\t\tcopy assignment operator called\n";
 	if (this != &other) {
 		this->first_name = other.first_name;
 		this->last_name = other.last_name;
