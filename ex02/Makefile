@@ -6,7 +6,7 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 14:47:56 by akostian          #+#    #+#              #
-#    Updated: 2025/02/19 04:10:28 by akostian         ###   ########.fr        #
+#    Updated: 2025/02/20 18:13:56 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ LOG_DIR				= logs
 OBJS				= $(addprefix $(BUILD_DIR)/, $(SRCS:%.cpp=%.o))
 
 CC					= c++
-CFLAGS				= -g3 -std=c++98
+CFLAGS				= -Wall -Wextra -Werror -g3 -std=c++98
 
 NORMINETTE			= norminette
 NORMINETTE_FLAGS	= --use-gitignore
